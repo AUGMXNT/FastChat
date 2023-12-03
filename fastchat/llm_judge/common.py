@@ -408,7 +408,7 @@ def play_a_match_pair(match: MatchPair, output_file: str):
     return result
 
 
-def setup_openai_api(model: str, use_azure=True):
+def setup_openai_api(model: str, use_azure=False):
     from functools import partial
 
     if model == "gpt-3.5-turbo":
