@@ -890,6 +890,7 @@ register_conv_template(
 # reference: https://github.com/facebookresearch/llama/blob/cfc3fc8c1968d390eb830e65c63865e980873a06/llama/generation.py#L212
 register_conv_template(
     Conversation(
+        system_message="あなたは役立つアシスタントです。",
         name="llama-2",
         system_template="[INST] <<SYS>>\n{system_message}\n<</SYS>>\n\n",
         roles=("[INST]", "[/INST]"),
