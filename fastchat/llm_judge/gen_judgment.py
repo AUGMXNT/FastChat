@@ -154,6 +154,8 @@ def make_judge_single(judge_model, judge_prompts):
     judges = {}
     judges["default"] = Judge(judge_model, judge_prompts["single-v1"])
     judges["math"] = Judge(judge_model, judge_prompts["single-math-v1"], ref_based=True)
+    '''
+    # These aren't implemented in JA versions...
     judges["default-mt"] = Judge(
         judge_model, judge_prompts["single-v1-multi-turn"], multi_turn=True
     )
@@ -163,6 +165,7 @@ def make_judge_single(judge_model, judge_prompts):
         ref_based=True,
         multi_turn=True,
     )
+    '''
     return judges
 
 
