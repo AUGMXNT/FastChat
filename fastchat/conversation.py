@@ -356,6 +356,23 @@ register_conv_template(
     )
 )
 
+# JSLM Gamma
+# source: https://huggingface.co/stabilityai/japanese-stablelm-instruct-gamma-7b#usage
+register_conv_template(
+    Conversation(
+        name="jslm_gamma",
+        system_message="以下は、タスクを説明する指示と、文脈のある入力の組み合わせです。要求を適切に満たす応答を書きなさい。",
+        roles=("指示", "応答"),
+        messages=(),
+        offset=0,
+        sep_style=SeparatorStyle.JSLM_ALPHA,
+        sep="\n\n### ",
+        sep="</s>",
+    )
+)
+
+
+
 # conv template for JSLM ALPHA with NAI tokenizer
 # source: https://huggingface.co/stabilityai/japanese-stablelm-instruct-alpha-7b
 register_conv_template(
