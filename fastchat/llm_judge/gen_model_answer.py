@@ -101,7 +101,9 @@ def get_model_answers(
         choices = []
         for i in range(num_choices):
             torch.manual_seed(i)
-            conv = get_conversation_template(model_path)
+            # Force it since it seems to pick the wrong one and the heuristics are a mess
+            conv = get_conversation_template("llama-2")
+            # conv = get_conversation_template(model_path)
             turns = []
             for j in range(len(question["turns"])):
                 if j == args.max_turns: 
