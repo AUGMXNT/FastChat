@@ -1,0 +1,5 @@
+# time python gen_model_answer.py --bench-name japanese_mt_bench --num-choices 4 --max-turns 1 --model-path /models/llm/shisa/ft-ablation/shisa-bad-7b-v1 --model-id shisa-bad-7b-v1 --num-gpus-total 2
+# time python gen_model_answer.py --bench-name japanese_mt_bench --num-choices 4 --max-turns 1 --model-path /models/llm/shisa/ft-ablation/shisa-gamma-7b-v1 --model-id shisa-gamma-7b-v1 --num-gpus-total 2
+# time python gen_model_answer.py --bench-name japanese_mt_bench --num-choices 4 --max-turns 1 --model-path /models/llm/shisa/zero-extra/shisa-mega-dpo-7b-v1.1 --model-id shisa-mega-dpo-7b-v1.1 --num-gpus-total 2
+# time python gen_model_answer.py --bench-name japanese_mt_bench --num-choices 4 --max-turns 1 --model-path /models/llm/shisa/zero-extra/shisa-mega-7b-v1.2 --model-id shisa-mega-7b-v1.2 --num-gpus-total 2
+time python gen_model_answer.py --bench-name japanese_mt_bench --num-choices 4 --max-turns 1 --model-path /models/llm/shisa/augmxnt_shisa-mega-7b-v1.2-dpo --model-id shisa-mega-7b-v1.2-dpo --num-gpus-total 2
