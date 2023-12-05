@@ -43,7 +43,7 @@ def get_answer(
             conv.append_message(conv.roles[0], question["turns"][j])
             conv.append_message(conv.roles[1], None)
 
-            if model in ["gpt-3.5-turbo", "gpt-4"]:
+            if model in ["gpt-3.5-turbo", "gpt-4", "gpt-4-1106-preview"]:
                 output = chat_compeletion_openai(model, conv, temperature, max_tokens)
             elif model in ["claude-v1", "claude-instant-v1"]:
                 output = chat_compeletion_anthropic(
