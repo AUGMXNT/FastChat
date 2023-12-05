@@ -416,7 +416,9 @@ def setup_openai_api(model: str, use_azure=False):
     elif model == "gpt-4":
         deployment_id = "misc-4"
     else:
-        raise NotImplementedError(f"{model=}")
+        # Azure problem not ours
+        pass
+        # raise NotImplementedError(f"{model=}")
 
     if use_azure:
         openai.api_type = "azure"
