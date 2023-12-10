@@ -98,11 +98,15 @@ def get_model_answers(
         else:
             temperature = 0.7
 
+        print('---')
+        print(question['category'])
+        print(temperature)
+
         choices = []
         for i in range(num_choices):
             torch.manual_seed(i)
             # Force it since it seems to pick the wrong one and the heuristics are a mess
-            conv = get_conversation_template("llama-2")
+            conv = get_conversation_template("llm-jp-sft")
             # conv = get_conversation_template(model_path)
             turns = []
             for j in range(len(question["turns"])):
@@ -118,6 +122,7 @@ def get_model_answers(
                 # this should align with the model adapter behavior
                 add_special_tokens = conv.add_special_tokens
                 input_ids = tokenizer([prompt], add_special_tokens=add_special_tokens).input_ids
+                print(prompt)
 
                 if temperature < 1e-4:
                     do_sample = False
@@ -158,7 +163,7 @@ def get_model_answers(
                     print("ERROR question ID: ", question["question_id"])
                     output = "ERROR"
                     print(e)
-
+                # output = "SKIP"
                 turns.append(output)
                 conv.messages[-1][-1] = output
 
