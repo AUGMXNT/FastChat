@@ -351,8 +351,37 @@ register_conv_template(
         sep2="</s>",
     )
 )
+# source: https://huggingface.co/moneyforward/houou-instruction-7b-v1
+# system_message="以下は、タスクを説明する指示と、文脈のある入力の組み合わせです。要求を適切に満たす応答を書きなさい。",
+# roles=("指示", "応答"),
+register_conv_template(
+    Conversation(
+        name="houou",
+        system_message="以下は、タスクを説明する指示です。要求を適切に満たす応答を書きなさい。",
+        roles=("入力", "応答"),
+        messages=(),
+        offset=0,
+        sep_style=SeparatorStyle.JSLM_ALPHA,
+        sep="\n\n### ",
+        sep2="</s>",
+    )
+)
 
-
+# source: https://huggingface.co/tokyotech-llm/Swallow-7b-instruct-hf
+# swallow
+register_conv_template(
+    Conversation(
+        name="one_shot",
+        system_message="### 指示：以下の質問に答えなさい。",
+        roles=("質問", "回答"),
+        messages=(),
+        offset=0,
+        sep_style=SeparatorStyle.ADD_COLON_SINGLE,
+        sep=" ### ",
+        sep2="</s>",
+        stop_str="###",
+    )
+)
 
 # JSLM Gamma
 # source: https://huggingface.co/stabilityai/japanese-stablelm-instruct-gamma-7b#usage
