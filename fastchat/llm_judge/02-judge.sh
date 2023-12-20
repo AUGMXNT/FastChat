@@ -7,3 +7,4 @@
 # time python gen_judgment.py --bench-name japanese_mt_bench --model-list houou-instruction-7b-v1 --judge-file data/judge_ja_prompts.jsonl --parallel 2
 # time python gen_judgment.py --bench-name japanese_mt_bench --model-list houou-instruction-7b-v1-correctedtemplate2 --judge-file data/judge_ja_prompts.jsonl --parallel 2
 time python gen_judgment.py --bench-name japanese_mt_bench --model-list tokyotech-llm_Swallow-7b-instruct-hf --judge-file data/judge_ja_prompts.jsonl --parallel 2
+# time python gen_judgment.py --bench-name japanese_mt_bench --model-list shisa-7b-v1-fullprompt --judge-file data/judge_ja_prompts.jsonl --parallel 2

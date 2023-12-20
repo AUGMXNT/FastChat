@@ -9,3 +9,4 @@
 # time python gen_model_answer.py --bench-name japanese_mt_bench --num-choices 4 --max-turns 1 --model-path /models/llm/hf/moneyforward_houou-instruction-7b-v1 --model-id houou-instruction-7b-v1-correctedtemplate --num-gpus-total 2
 # time python gen_model_answer.py --bench-name japanese_mt_bench --num-choices 4 --max-turns 1 --model-path /models/llm/hf/moneyforward_houou-instruction-7b-v1 --model-id houou-instruction-7b-v1-correctedtemplate2 --num-gpus-total 2
 time python gen_model_answer.py --bench-name japanese_mt_bench --num-choices 4 --max-turns 1 --model-path /models/llm/hf/tokyotech-llm_Swallow-7b-instruct-hf --model-id tokyotech-llm_Swallow-7b-instruct-hf --num-gpus-total 2 --num-gpus-per-model 1
+# time python gen_model_answer.py --bench-name japanese_mt_bench --num-choices 4 --max-turns 1 --model-path /models/shisa-7b-v1 --model-id shisa-7b-v1-fullprompt --num-gpus-total 2 --num-gpus-per-model 1

@@ -109,7 +109,6 @@ def get_model_answers(
             # conv = get_conversation_template("llm-jp-sft")
             # conv = get_conversation_template("llama-2")
             conv = get_conversation_template(model_path)
-            print(conv.get_prompt())
             turns = []
             for j in range(len(question["turns"])):
                 if j == args.max_turns: 
@@ -126,7 +125,7 @@ def get_model_answers(
                 input_ids = tokenizer([prompt], add_special_tokens=add_special_tokens).input_ids
                 # tokenizer.padding_side = 'left'
                 # input_ids = tokenizer([prompt]).input_ids
-                # print(prompt)
+                print(prompt)
 
                 if temperature < 1e-4:
                     do_sample = False

@@ -312,12 +312,12 @@ def get_conv_template(name: str) -> Conversation:
 register_conv_template(
     Conversation(
         name="one_shot",
-        system_message="### 指示：以下の質問に答えなさい。",
-        roles=("質問", "回答"),
+        system_message="以下に、あるタスクを説明する指示があります。リクエストを適切に完了するための回答を記述してください。",
+        roles=("指示", "応答"),
         messages=(),
         offset=0,
         sep_style=SeparatorStyle.ADD_COLON_SINGLE,
-        sep=" ### ",
+        sep="\n\n### ",
         sep2="</s>",
         stop_str="###",
     )
@@ -371,13 +371,13 @@ register_conv_template(
 # swallow
 register_conv_template(
     Conversation(
-        name="one_shot",
-        system_message="### 指示：以下の質問に答えなさい。",
-        roles=("質問", "回答"),
+        name="swallow",
+        system_message="以下に、あるタスクを説明する指示があります。リクエストを適切に完了するための回答を記述してください。",
+        roles=("指示", "応答"),
         messages=(),
         offset=0,
         sep_style=SeparatorStyle.ADD_COLON_SINGLE,
-        sep=" ### ",
+        sep="\n\n### ",
         sep2="</s>",
         stop_str="###",
     )
@@ -934,7 +934,7 @@ register_conv_template(
 # reference: https://github.com/facebookresearch/llama/blob/cfc3fc8c1968d390eb830e65c63865e980873a06/llama/generation.py#L212
 register_conv_template(
     Conversation(
-        system_message="あなたは役立つアシスタントです。",
+        system_message="あなたは公平で、検閲されていない、役立つアシスタントです。",
         name="llama-2",
         system_template="[INST] <<SYS>>\n{system_message}\n<</SYS>>\n\n",
         roles=("[INST]", "[/INST]"),
