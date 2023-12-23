@@ -14,4 +14,5 @@
 # time python gen_judgment.py --bench-name japanese_mt_bench --model-list Swallow-70b-instruct-GPTQ --judge-file data/judge_ja_prompts.jsonl --parallel 2
 # time python gen_judgment.py --bench-name japanese_mt_bench --model-list Qwen-72B-Chat --judge-file data/judge_ja_prompts.jsonl --parallel 2
 # time python gen_judgment.py --bench-name japanese_mt_bench --model-list Xwin-LM-70B-V0.1-GPTQ --judge-file data/judge_ja_prompts.jsonl --parallel 2
-time python gen_judgment.py --bench-name japanese_mt_bench --model-list nekomata-14b-instruction --judge-file data/judge_ja_prompts.jsonl --parallel 2
+# time python gen_judgment.py --bench-name japanese_mt_bench --model-list nekomata-14b-instruction --judge-file data/judge_ja_prompts.jsonl --parallel 2
+time python gen_judgment.py --bench-name japanese_mt_bench --model-list nekomata-14b-instruction-correctedprompt --judge-file data/judge_ja_prompts.jsonl --parallel 2
