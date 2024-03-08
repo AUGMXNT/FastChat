@@ -107,8 +107,8 @@ def get_model_answers(
             torch.manual_seed(i)
             # Force it since it seems to pick the wrong one and the heuristics are a mess
             # conv = get_conversation_template("llm-jp-sft")
-            # conv = get_conversation_template("llama-2")
-            conv = get_conversation_template(model_path)
+            conv = get_conversation_template("llama-2")
+            # conv = get_conversation_template(model_path)
             turns = []
             for j in range(len(question["turns"])):
                 if j == args.max_turns: 
@@ -121,10 +121,10 @@ def get_model_answers(
 
                 # TODO: find better way to adapt for NAI tokenizer usage of JSLM Alpha
                 # this should align with the model adapter behavior
-                add_special_tokens = conv.add_special_tokens
-                input_ids = tokenizer([prompt], add_special_tokens=add_special_tokens).input_ids
+                # add_special_tokens = conv.add_special_tokens
+                # input_ids = tokenizer([prompt], add_special_tokens=add_special_tokens).input_ids
                 # tokenizer.padding_side = 'left'
-                # input_ids = tokenizer([prompt]).input_ids
+                input_ids = tokenizer([prompt]).input_ids
                 print(prompt)
 
                 if temperature < 1e-4:

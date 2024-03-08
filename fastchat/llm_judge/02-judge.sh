@@ -17,6 +17,12 @@
 # time python gen_judgment.py --bench-name japanese_mt_bench --model-list nekomata-14b-instruction --judge-file data/judge_ja_prompts.jsonl --parallel 2
 # time python gen_judgment.py --bench-name japanese_mt_bench --model-list nekomata-14b-instruction-correctedprompt --judge-file data/judge_ja_prompts.jsonl --parallel 2
 # time python gen_judgment.py --bench-name japanese_mt_bench --model-list nekomata-14b-instruction-correctedprompt-hf --judge-file data/judge_ja_prompts.jsonl --parallel 2
-time python gen_judgment.py --bench-name japanese_mt_bench --model-list chatntq-nekomata-14b --judge-file data/judge_ja_prompts.jsonl --parallel 2
-time python gen_judgment.py --bench-name japanese_mt_bench --model-list chatntq-qwen-14b-chat --judge-file data/judge_ja_prompts.jsonl --parallel 2
-time python gen_judgment.py --bench-name japanese_mt_bench --model-list chatntq-elyza-13b-fast --judge-file data/judge_ja_prompts.jsonl --parallel 2
+# time python gen_judgment.py --bench-name japanese_mt_bench --model-list chatntq-nekomata-14b --judge-file data/judge_ja_prompts.jsonl --parallel 2
+# time python gen_judgment.py --bench-name japanese_mt_bench --model-list chatntq-qwen-14b-chat --judge-file data/judge_ja_prompts.jsonl --parallel 2
+# time python gen_judgment.py --bench-name japanese_mt_bench --model-list chatntq-elyza-13b-fast --judge-file data/judge_ja_prompts.jsonl --parallel 2
+# time python gen_judgment.py --bench-name japanese_mt_bench --model-list orionstarai-orion-14b-chat --judge-file data/judge_ja_prompts.jsonl --parallel 2
+# time python gen_judgment.py --bench-name japanese_mt_bench --model-list chatntq-orion-14b-chat --judge-file data/judge_ja_prompts.jsonl --parallel 2
+# time python gen_judgment.py --bench-name japanese_mt_bench --model-list internlm2-chat-20b --judge-file data/judge_ja_prompts.jsonl --parallel 2
+# time python gen_judgment.py --bench-name japanese_mt_bench --model-list Qwen1.5-14b-Chat --judge-file data/judge_ja_prompts.jsonl --parallel 2
+# time python gen_judgment.py --bench-name japanese_mt_bench --model-list Senku-70B-Full --judge-file data/judge_ja_prompts.jsonl --parallel 2
+time python gen_judgment.py --bench-name japanese_mt_bench --model-list shisa-12b-v1-sft --judge-file data/judge_ja_prompts.jsonl --parallel 2
