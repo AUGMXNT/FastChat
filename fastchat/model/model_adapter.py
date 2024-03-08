@@ -70,7 +70,7 @@ class BaseModelAdapter:
             )
         try:
             model = AutoModelForCausalLM.from_pretrained(
-                model_path, low_cpu_mem_usage=True, **from_pretrained_kwargs
+                model_path, low_cpu_mem_usage=True, trust_remote_code=True, **from_pretrained_kwargs
             )
         except NameError:
             model = AutoModel.from_pretrained(
@@ -150,7 +150,7 @@ def load_model(
     device: str = "cuda",
     num_gpus: int = 1,
     max_gpu_memory: Optional[str] = None,
-    load_8bit: bool = False,
+    load_8bit: bool = True,
     cpu_offloading: bool = False,
     gptq_config: Optional[GptqConfig] = None,
     awq_config: Optional[AWQConfig] = None,
@@ -293,6 +293,8 @@ def get_generate_stream_function(model: torch.nn.Module, model_path: str):
     from fastchat.serve.inference import generate_stream
 
     model_type = str(type(model)).lower()
+    print(model_type)
+    sys.exit()
     is_chatglm = "chatglm" in model_type
     is_falcon = "rwforcausallm" in model_type
     is_codet5p = "codet5p" in model_type
